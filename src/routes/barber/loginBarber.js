@@ -15,6 +15,7 @@ function LogInBarber() {
       image={barberoIMG}
       value={1}
       />
+      
     </div>
   );
 }
