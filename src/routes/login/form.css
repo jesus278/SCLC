@@ -1,0 +1,46 @@
+    .imgcontainer-login {
+    width: 20%;
+    border-radius: 15px;
+    text-shadow: 2px;
+
+  }  
+  .logIn{
+    justify-content: center;
+    text-align: center;
+  }
+  .mb-3login{
+    margin-top: 2rem;
+    margin-left: 25%;
+    width: 50% !important;
+  }
+  .label{
+    width: auto;
+    height: auto;
+  }
+  .input-in{
+    width: auto;
+  }
+  @media (max-width: 992px) {
+    .imgcontainer-login {
+      width: 200px;
+      border-radius: 15px;
+      text-shadow: 2px;
+  
+    }  
+    .logIn{
+      justify-content: center;
+      text-align: center;
+    }
+    .mb-3login{
+      margin-top: 1rem;
+      margin-left: 20%;
+      width: 70% !important;
+    }
+    .label{
+      width: auto;
+      height: auto;
+    }
+    .input-in{
+      width: auto;
+    }
+  }
