@@ -1,0 +1,8 @@
+.LinkStyle{
+    margin-left: 2rem;
+}
+.link-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}

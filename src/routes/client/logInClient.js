@@ -13,6 +13,13 @@ function LogInClient() {
         </a>
       </div>
       <LogIn cabecera="Inicio de sesion Cliente" image={clienteIMG} />
+      <Link
+        //className={color ? "text-visible" : "LinkStyle"}
+        className="LinkStyle"
+        to="Registro"
+      >
+        Registrarme
+      </Link>
       <div className="link-box">
       <Link
         //className={color ? "text-visible" : "LinkStyle"}

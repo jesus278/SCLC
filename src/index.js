@@ -7,6 +7,7 @@ import LogInBarber from './routes/barber/loginBarber';
 import AddBarber from './routes/gerente/addBarber';
 import LogInGerente from './routes/gerente/logInGerente';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import RegistroCliente from './routes/client/registroCliente';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,10 @@ root.render(
       </Routes>
       <Routes>
         <Route  path="/Gerente"  element={<LogInGerente/>} />
+        
+      </Routes>
+      <Routes>
+        <Route  path="/Registro"  element={<RegistroCliente/>} />
         
       </Routes>
     </BrowserRouter>
