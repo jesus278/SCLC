@@ -2,8 +2,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import logo from "../../img/logo.jpg";
 import React, { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
 import Axios from "axios";
+import "./registroCliente.css"
 
 const RegistroCliente = () => {
 
@@ -23,26 +23,9 @@ const RegistroCliente = () => {
         mail:mail,
         passMail:passMail
     }).then(()=>{
-        <div
-      className="modal show"
-      style={{ display: 'block', position: 'initial' }}
-    >
-      <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          <p>Modal body text goes here.</p>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
-      </Modal.Dialog>
-    </div>
+       
     })
+    
    }
 
   return (
@@ -54,7 +37,7 @@ const RegistroCliente = () => {
       </div>
       <Form>
         <Form.Group className="mb-3" controlId="nombre">
-          <Form.Label>Nombre</Form.Label>
+          <Form.Label className="label">Nombre</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ingresa tu nombre"
@@ -64,7 +47,7 @@ const RegistroCliente = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="appellidoP">
-          <Form.Label>Apellido Paterno</Form.Label>
+          <Form.Label className="label">Apellido Paterno</Form.Label>
           <Form.Control type="text" placeholder="Ingresa tu apellido paterno" onChange={(event)=>{
             setFatherLastName(event.target.value)
           }} />
@@ -94,7 +77,7 @@ const RegistroCliente = () => {
             }}/>
         </Form.Group>
        
-        <Button variant="primary" type="submit" onClick={addCliente}>
+        <Button className="buttons" variant="primary" type="submit" onClick={addCliente}>
           Crear
         </Button>
       </Form>

@@ -8,6 +8,7 @@ import AddBarber from './routes/gerente/addBarber';
 import LogInGerente from './routes/gerente/logInGerente';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import RegistroCliente from './routes/client/registroCliente';
+import RegistroBarbero from './routes/barber/registroBarbero';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,14 @@ root.render(
       </Routes>
       <Routes>
         <Route  path="/Registro"  element={<RegistroCliente/>} />
+        
+      </Routes>
+      <Routes>
+        <Route  path="Barbero/Registro"  element={<RegistroBarbero/>} />
+        
+      </Routes>
+      <Routes>
+        <Route  path="Gerente/Home"  element={<RegistroBarbero/>} />
         
       </Routes>
     </BrowserRouter>

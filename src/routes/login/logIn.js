@@ -4,16 +4,36 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import "./form.css"
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 function LogIn(props) {
 
-  const [value, setValue] = useState(0);
+  const table = props.table;
+  const [mail, setMail] = useState("");
+  const [passMail, setPassMail] = useState("");
 
-  const initSesion = () => {
-    Axios.get("http://localhost:3001/sesion").then((response) => {
-      console.log(response);
-    });
-  };
+  const initSesion=()=>{
+    Axios.get("http://localhost:3001/sesion",{
+        params:{
+          mail:mail,
+          passMail:passMail,
+          table:table
+        }
+    }).then((response)=>{
+      if(!response===null){
+        <Link
+        //className={color ? "text-visible" : "LinkStyle"}
+        className="LinkStyle"
+        to="Home"
+      >
+      </Link>
+      
+      }
+       
+    })
+    
+   }
 
   return (
     <div className='logIn'>
@@ -27,6 +47,9 @@ function LogIn(props) {
           aria-label="Username"
           aria-describedby="basic-addon1"
           className="input-in"
+          onChange={(event)=>{
+            setMail(event.target.value)
+          }}
         />
       </InputGroup>
 
@@ -37,12 +60,13 @@ function LogIn(props) {
           placeholder="Contraseña"
           aria-label="Password"
           aria-describedby="basic-addon1"
+          onChange={(event)=>{
+            setPassMail(event.target.value)
+          }}
         />
       </InputGroup>
       <br></br>
-      <Button  as="input" type="submit" value="Iniciar" onClick={initSesion(()=>{
-        setValue(props.value)
-      })}/>
+      <Button  as="input" type="submit" value="Iniciar" onClick={initSesion}/>
 
       
     </>

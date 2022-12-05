@@ -14,6 +14,7 @@ function LogInGerente() {
       <LogIn
       cabecera="Inicio de sesion Gerente"
       image={gerenteIMG}
+      table="gerente"
       />
     </div>
   );
