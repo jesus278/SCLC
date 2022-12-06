@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import logo from "../../img/logo.jpg";
 import React, { useState } from 'react';
 import Axios from "axios";
+import "./registro.css"
 
 const RegistroBarbero = () => {
   const [name, setName] = useState("");
@@ -32,6 +33,7 @@ const RegistroBarbero = () => {
         </a>
       </div>
       <Form>
+        <h1 className="cabecera">Alta Barbero </h1>
         <Form.Group className="mb-3" controlId="nombre">
           <Form.Label>Nombre</Form.Label>
           <Form.Control

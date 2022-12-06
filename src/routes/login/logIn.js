@@ -4,16 +4,19 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import "./form.css"
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
+import {Navigate, Route, Routes, useHref, useNavigate } from 'react-router-dom';
+import HomeGerente from "../gerente/home/homeGerente";
 
 function LogIn(props) {
-
+  let navigate =useNavigate();
   const table = props.table;
   const [mail, setMail] = useState("");
   const [passMail, setPassMail] = useState("");
 
   const initSesion=()=>{
+    
+    <Route path='/HomeGerente' element={ <HomeGerente/>}/>
+    navigate('/HomeGerente');
     Axios.get("http://localhost:3001/sesion",{
         params:{
           mail:mail,
@@ -21,13 +24,7 @@ function LogIn(props) {
           table:table
         }
     }).then((response)=>{
-      if(!response===null){
-        <Link
-        //className={color ? "text-visible" : "LinkStyle"}
-        className="LinkStyle"
-        to="Home"
-      >
-      </Link>
+      if(response !== null){
       
       }
        

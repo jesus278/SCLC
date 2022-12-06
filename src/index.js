@@ -9,6 +9,7 @@ import LogInGerente from './routes/gerente/logInGerente';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import RegistroCliente from './routes/client/registroCliente';
 import RegistroBarbero from './routes/barber/registroBarbero';
+import HomeGerente from './routes/gerente/home/homeGerente';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -34,9 +35,10 @@ root.render(
         
       </Routes>
       <Routes>
-        <Route  path="Gerente/Home"  element={<RegistroBarbero/>} />
+        <Route  path="HomeGerente"  element={<HomeGerente/>} />
         
       </Routes>
+    
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

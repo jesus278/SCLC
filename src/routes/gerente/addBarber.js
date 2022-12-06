@@ -25,11 +25,7 @@ const AddBarber = () => {
       console.log("Barbero dado de alta");
     });
   };
-  const getBabers = () => {
-    Axios.get("http://localhost:3001/listbarbers").then((response) => {
-      console.log(response);
-    });
-  };
+
   return (
     <div>
       <Form>
@@ -100,9 +96,6 @@ const AddBarber = () => {
         </Form.Group>
         <Button variant="primary" type="submit" onClick={addBarber}>
           Añadir Barbero
-        </Button>
-        <Button variant="primary" type="submit" onClick={getBabers}>
-          Mostrar Barberos
         </Button>
       </Form>
     </div>
