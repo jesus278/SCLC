@@ -13,6 +13,7 @@ const RegistroCliente = () => {
     const [phoneNumber,setPhoneNumber]= useState("");
     const [mail,setMail]= useState("");
     const [passMail,setPassMail]= useState("");
+    const [altura, setAltura]=useState("");
 
    const addCliente=()=>{
     Axios.post("http://localhost:3001/Registro",{
