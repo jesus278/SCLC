@@ -10,6 +10,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import RegistroCliente from './routes/client/registroCliente';
 import RegistroBarbero from './routes/barber/registroBarbero';
 import HomeGerente from './routes/gerente/home/homeGerente';
+import HomeCliente from './routes/client/home/homeClient';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,6 +37,14 @@ root.render(
       </Routes>
       <Routes>
         <Route  path="HomeGerente"  element={<HomeGerente/>} />
+        
+      </Routes>
+      <Routes>
+        <Route  path="HomeCliente"  element={<HomeCliente/>} />
+        
+      </Routes>
+      <Routes>
+        <Route  path="AddBarber"  element={<AddBarber/>} />
         
       </Routes>
     

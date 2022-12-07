@@ -2,6 +2,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import Axios from "axios";
+import logo from "../../img/logo.jpg";
+import "./styles/addBarber.css"
 
 const AddBarber = () => {
   const [name, setName] = useState("");
@@ -28,6 +30,12 @@ const AddBarber = () => {
 
   return (
     <div>
+      <div>
+        <a href="/HomeGerente">
+          <img className="redirect-home" src={logo}></img>
+        </a>
+      </div>
+      <h1 className="title">Nuevo barbero</h1>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre</Form.Label>
@@ -94,7 +102,7 @@ const AddBarber = () => {
             }}
           />
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={addBarber}>
+        <Button className="button-add" variant="primary" type="submit" onClick={addBarber}>
           Añadir Barbero
         </Button>
       </Form>
